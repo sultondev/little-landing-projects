@@ -1,0 +1,100 @@
+*
+    padding: 0
+    margin: 0
+    font-family: sans-serif
+    list-style: none
+    text-decoration: none
+    box-sizing: border-boxz
+
+body
+    font-family: var(--ff-secondary)
+    background: var(--clr-grey-10)
+    color: var(--clr-grey-1)
+    line-height: 1.5
+
+.btn
+    text-transform: uppercase
+    background: transparent
+    color: var(--clr-black)
+    padding: 0.375rem 0.75rem
+    letter-spacing: var(--spacing)
+    display: inline-block
+    transition: var(--transition)
+    font-size: 0.875rem
+    border: 2px solid var(--clr-black)
+    cursor: pointer
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4)
+    border-radius: var(--radius)
+
+.btn-white
+    color: var(--clr-white)
+    border-color: var(--clr-white)
+    border-radius: 0
+    padding: 0.5rem 1rem
+
+@media screen and (min-width: 800px)
+    h1
+        font-size: 4rem
+    h2
+        font-size: 2.5rem
+    .nav
+        background: transparent !important
+        &-bars
+            display: none
+        &-container
+            width: 90vw
+            max-width: 1170px
+            margin: 0 auto
+            display: flex
+            align-items: center
+            justify-content: space-between
+            &__links
+                height: auto !important
+
+@media screen and (min-width: 768px)
+    .header-banner__text
+        max-width: 40rem !important
+
+section
+    min-height: 90vh
+
+.light-text
+    color: var(--clr-secondary)
+
+.show
+    &-container
+        &__links
+            height: 240px !important
+            .nav-list
+                height: 90%
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                align-items: flex-start !important
+                padding: 1rem 0 !important
+                &__item-link
+                    color: var(--clr-grey-6) !important
+                    &:hover
+                        color: var(--clr-grey-2) !important
+
+.nav-fixed
+    position: fixed
+    top: 0
+    background: #fff !important
+    min-width: 100vw
+    transition: 0.8s all forwards
+    z-index: 100
+    .nav-list
+        &__item
+            &-link
+                color: var(--clr-grey-2) !important
+                transition: var(--transition)
+                &:hover
+                    color: var(--clr-grey-6) !important
+@keyframes  observingElements
+    from
+        transform: translateY(100px)
+        opacity: 0
+    to
+        transform: translateY(0)
+        opacity: 1

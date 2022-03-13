@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Quiksand:wght@400;500;600;700&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Quiksand', sans-serif;
+    box-sizing: border-box;
+    color: white;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    min-width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(142, 77, 224, 0.92) 0%, #8E4CE0 0.01%, #F51EE0 100%);
+}
+
+
+/*===== Nav =======*/
+
+.header {
+    position: fixed;
+    height: 100vh;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.9);
+    left: 0;
+    top: 0;
+    padding: 1.25rem 0.5rem 2rem;
+    transition: 0.5s;
+    z-index: 3;
+}
+
+.header-full {
+    width: 60px;
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+    overflow: hidden;
+}
+
+.nav-logo__icon {
+    margin-right: 1.2rem;
+    width: 30px;
+    height: 30px;
+}
+
+.nav-logo__text {
+    color: white;
+    font-weight: 500;
+}
+
+.nav-toggle {
+    position: absolute;
+    top: 1.10rem;
+    right: -0.6rem;
+    width: 20px;
+    height: 20px;
+    background: orange;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.nav-list {}
+
+.nav-list__link {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-list__link:hover {
+    background: orange;
+    color: black;
+}
+
+.nav-list__link-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: inherit;
+}
+
+.nav-list__link-text {
+    font-weight: 700;
+    color: inherit;
+}

@@ -1,0 +1,112 @@
+.main
+    max-width: 100vw
+    max-height: 100vh
+    position: relative
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    overflow: hidden
+    place-items: center
+    background: var(--clr-dark)
+    color: var(--clr-white)
+    &-banner
+            width: 50vw
+            height: 100vh
+            &__email, &__login, &__reg
+                @include flex-start-center
+                width: 100%
+                height: 100%
+                width: 50vw
+                height: 100vh
+                &-svg
+                    width: 800px
+                    height: 566px
+
+            &__login
+                background: url(../icon/banner/login-draw-banner.svg) center center/cover no-repeat
+
+            &__email
+                background: url(../icon/banner/email-draw-banner.svg) center center/cover no-repeat
+            &__reg
+                background: url(../icon/banner/email-draw-banner.svg) center center/cover no-repeat
+    
+
+
+
+    &-list
+        @include flex-between-center-column
+        list-style: none
+        min-height: 580px
+        &__item
+            &-title
+                flex-grow: 0.1
+                @include flex-between-center-column
+            &-header
+                font-size: 3.6rem
+                color: inherit
+                &-reg
+                    display: none
+                    font-size: 3.6rem
+                    color: inherit
+            &-reg
+                flex-grow: 0.6
+
+
+            &-btn
+                @include default-btn
+                width: 434px
+                height: 50px
+                background: var(--clr-green)
+                border-radius: 24px
+                cursor: pointer
+                color: inherit
+                font-size: 1.2rem
+            
+            &-create
+                
+
+    &-reg
+        @include flex-between-center-column
+        height: 14rem
+        &__item
+
+            
+
+        &__username, &__password
+            
+
+
+        &__username, &__password, &__email, &__code, &__confirm
+            // position: relative
+            &-input
+                @include default-input-text()
+                width: 86%
+                outline: none
+                color: var(--clr-grey)
+                font-size: 1.4rem
+                padding: 0.4rem 0
+                
+            &-icon
+                font-size: 1.2rem
+                color: var(--clr-grey)
+                padding: 0 1rem 0 0.6rem
+            &::after
+                content: ""
+                display: block
+                // position: absolute
+                width: 434px
+                height: 2px
+                bottom: -0.4rem
+                background: var(--clr-grey)
+
+        &__option
+            @include flex-between-center
+            width: 100%
+            &-new, &-forgot, &-login
+                color: var(--clr-grey-more)
+                text-decoration: none
+                font-size: 1rem 
+            &-login
+                display: none
+
+        &__email, &__confirm
+            display: none

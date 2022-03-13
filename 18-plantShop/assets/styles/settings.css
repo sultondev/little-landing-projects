@@ -1,0 +1,75 @@
+:root {
+  /* Base colors */
+  --clr-white: #fff;
+  --clr-dark: #000;
+
+  /* Backgound colors */
+  --bg-clr-dark: #213f36;
+  --bg-clr-light: #e7e8e6;
+
+  /* text colors */
+  --txt-clr-primary-light: #d2ffcb;
+  --txt-clr-primary-dark: #355342;
+
+  /* Button colors */
+  --btn-clr-primary-light: #b7eaaf;
+  --btn-clr-primary-dark: #375739;
+  --btn-clr-secondary-light: #f87c68;
+  --btn-clr-secondary-dark: #ed2c27;
+
+  /* Gradient Colors */
+  --grt-clr-green: linear-gradient(to right, #7FCA21, #105200);
+  --grt-clr-green-light: linear-gradient(to right, #a3ff33, #1d8603);
+  /*
+    Typography
+  */
+
+  /* Heading */
+  --fs-1: 80px;
+  --fs-2: 64px;
+  --fs-3: 60px;
+  --fs-4: 30px;
+  --fs-5: 24px;
+
+  /* Body text */
+  --large-txt: 24px;
+  --medium-txt: 20px;
+  --caption-txt: 18px;
+  --normal-txt: 16px;
+  --small-txt: 12px;
+
+  /* Buttons' border radiuses */
+  --br-40: 40px;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "SF-Pro", sans-serif, Arial, Helvetica;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "SF-Pro";
+  font-weight: 400;
+  src: url("../fonts/sf-pro-display-medium/SF-Pro-Display-Medium.eot");
+  /* IE9*/
+  src: url("../fonts/sf-pro-display-medium/SF-Pro-Display-Medium.eot") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../fonts/sf-pro-display-medium/SF-Pro-Display-Medium.woff2") format("woff2"),
+    /* chrome、firefox */
+    url("../fonts/sf-pro-display-medium/SF-Pro-Display-Medium.woff") format("woff"),
+    /* chrome、firefox */
+    url("../fonts/sf-pro-display-medium/SF-Pro-Display-Medium.ttf") format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("../fonts/sf-pro-display-medium/SF-Pro-Display-Medium.svg#SF Pro Display Medium") format("svg");
+  /* iOS 4.1- */
+}

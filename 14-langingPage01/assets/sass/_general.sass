@@ -1,0 +1,233 @@
+.welcome
+    min-height: 100vh
+    @include flex-between-start
+    flex-direction: column
+    background: var(--clr-white)
+    &-header
+        margin: 0 100px 0 auto
+        min-width: 430px 
+        flex-grow: 0.1
+        @include flex-between-center
+        &__link
+            font-size: 1.6rem
+            color: var(--clr-dark)
+            text-decoration: none
+            font-weight: 600
+        &__toggle
+            font-size: var(--fs-2)
+            background: none
+            border: none
+            cursor: pointer
+            display: none
+            color: var(--clr-dark)
+    &-info
+        list-style: none
+        @include flex-between-center
+        padding: 0 250px
+        width: 100%
+        position: relative
+        &__item
+            @include flex-between-start
+            flex-direction: column
+            max-width: 700px
+            position: relative
+            &:nth-of-type(2)::after
+                content: ""
+                display: block
+                position: absolute
+                width: 300px
+                height: 300px
+                background: var(--clr-white-1)
+                right: 0.6rem
+                top: 0.6rem
+                z-index: 1
+                border-radius: 50%
+
+        &__header
+            font-weight: 700
+            font-size: var(--fs-4)
+            color: var(--clr-dark)
+            line-height: var(--lh-1)
+        &__subheader
+            font-size: 1.4rem
+            font-family: "Heebo"
+            font-weight: 400
+            color: var(--clr-dark)
+            margin-top: 50px
+        &__admin
+            width: 300px
+            height: 300px
+            position: relative
+            z-index: 4
+            // aspect-ratio: 1/1
+    &-btn
+        padding: 0 250px
+        flex-grow: 0.3
+        &__resume
+            padding: 15px 20px
+            background: var(--clr-red-1)
+            color: var(--clr-white)
+            text-decoration: none
+            font-size: 1.4rem
+            transition: 0.8s hover
+            &:hover
+                background: #fc4747
+
+
+.post
+    min-height: 400px
+    background: var(--clr-white-1)
+    max-height: 400px
+    overflow: hidden
+    &-info
+        @include flex-between-center
+        &__header
+            font-family: "Heebo"
+            font-weight: 400
+            font-size: 22px
+            line-height: 60px
+            color: var(--clr-dark)
+        &__btn
+            @include empty-btn
+            color: var(--clr-blue)
+            cursor: pointer
+            font-family: "Heebo"
+            font-weight: 400
+            font-size: 22px
+    &-list
+        display: grid
+        // grid-template-columns: 1fr 1fr 1fr
+        grid-template-columns: repeat( auto-fill , minmax(400px, 1fr) )
+        list-style: none
+        grid-gap: 6rem 1rem
+        place-items: center
+        &__item
+            background: var(--clr-white)
+            padding: 24px 22px 35px 22px
+            min-height: 300px
+            max-width: 400px
+            &-header
+                font-family: "Heebo"
+                font-weight: 700
+                font-size: 26px
+                line-height: 38px
+                padding-right: 6rem
+            &-article
+                font-weight: 400
+                font-size: 18px
+                color: var(--clr-dark)
+            &-wrapper
+                width: 80%
+                @include flex-between-center
+                line-height: 50px
+    &-date
+        color: var(--clr-dark)
+    &-theme
+        color: var(--clr-dark)
+
+
+
+.feature
+    min-height: 868px
+    height: 100%
+    background: var(--clr-white)
+    &-header
+        line-height: 120px
+        color: var(--clr-dark)
+        font-size: var(--fs-2)
+        font-family: "Heebo"
+        font-weight: 400
+    &-list
+        @include flex-between-start
+        list-style: none
+        flex-direction: column
+        min-height: 700px
+        &__item
+            @include flex-between-start
+            position: relative
+            min-width: 100%
+            &::after
+                content: ""
+                display: block
+                width: 100%
+                background: var(--clr-grey)
+                height: 2px
+                position: absolute
+                bottom: -2.1rem
+            &-picture
+                width: 250px
+                height: 190px
+    &-work
+        @include flex-between-start
+        flex-direction: column
+        list-style: none
+        min-height: 190px
+        max-width: 80%
+        min-width: 76%
+        &__item
+            &-header
+                font-family: "Heebo"
+                font-weight: 700
+                font-size: var(--fs-2)
+                color: var(--clr-dark)
+            &-article
+                max-width: 700px
+            &-date
+                border-radius: 16px
+                background: var(--clr-blue-1)
+                color: var(--clr-white)
+                font-size: 1rem
+                padding: 0.3rem 0.6rem
+                margin-right: 1rem
+            &-theme
+                font-family: "Heebo"
+                font-size: 20px
+                color: var(--clr-grey-1)
+
+
+
+
+
+.footer
+    min-height: 182px
+    background: var(--clr-white)
+    &-social
+        @include flex-between-center
+        list-style: none
+        width: 20%
+        margin: 0 auto
+        &__item
+        &__link
+            color: var(--clr-dark)
+            font-size: 2.4rem
+    &__copyright
+        margin-top: 1rem
+        font-size: 1.4rem
+
+
+
+.anim-elements 
+    transform: translateY(8rem)
+    opacity: 0
+    transition: all cubic-bezier(0.7, -.6, .4, 1.5) 0.9s
+    transition-property: transform, opacity
+
+.appear-anim
+    transform: translateY(0rem)
+    opacity: 1
+
+.container
+    &-post
+        overflow: hidden
+        padding: 12px 250px 32px 250px
+        background: inherit
+    &-feature
+        padding: 0 250px 80px 250px
+        min-height: 700px
+        background: inherit
+    &-footer
+        min-height: 100%
+        background: inherit
+        @include flex-between-center
+        flex-direction: column
+        padding: 50px 0

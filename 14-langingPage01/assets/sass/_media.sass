@@ -1,0 +1,113 @@
+@media (max-width: 1440px)
+    .welcome
+        &-header
+        &-info
+            &__admin
+                width: 360px
+                height: 360px
+        &-btn
+            &-resume
+
+@media (max-width: 1366px)
+    .welcome
+        &-header
+            &__link
+                font-size: 1.3rem
+        &-info
+            padding: 0 150px
+            &__admin
+                width: 240px
+                height: 240px
+            &__item
+                max-width: 500px
+                &:nth-of-type(2)::after
+                    width: 240px
+                    height: 240px
+            &__header
+                font-size: 2.8rem
+            &__subheader
+                font-size: 1rem
+                margin-top: 50px
+        &-btn
+            padding: 0 150px
+            &-resume
+                padding: 10px 14px
+    .post
+        max-height: 900px
+        min-height: 760px
+        &-info
+        &-list
+            grid-gap: 2rem 1rem
+        
+    .featured
+        &-list
+            &__item
+                &-picture
+                    width: 220px
+                    height: 180px
+        &-work
+            min-height: 180px
+            max-width: 70%
+            min-width: 60%
+
+@media (max-width: 1200px)
+    .post
+        min-height: 400px
+        max-height: 400px
+        &-info
+        &-list
+            grid-template-columns: repeat( auto-fill , minmax(380px, 1fr) )
+            grid-gap: 4rem 0rem
+
+@media (max-width: 950px)
+    .welcome
+        &-header
+        &-info
+            &__admin
+                width: 240px
+                height: 240px
+        &-btn
+            &-resume
+
+@media (max-width: 375px)
+    .welcome
+        &-header
+            position: relative
+            min-width: 100%
+            &__link
+                display: none
+            &__toggle
+                display: block
+                font-size: 1.6rem
+                position: absolute
+                right: 20px
+                top: 14px
+        &-info
+            padding: 0 20px
+            flex-direction: column-reverse
+            &__item
+                max-width: 328px
+                &:nth-of-type(2)::after
+                    width: 170px
+                    height: 170px
+            &__header
+                font-size: 32px
+                text-align: center
+                line-height: 40px
+                margin-top: 1rem
+            &__subheader
+                font-size: var(--fs-1)
+                text-align: center
+            &__admin
+                width: 170px
+                height: 170px
+        &-btn
+            padding: 0
+            margin: 0 auto
+            &-resume
+                width: 200px
+                height: 50px
+
+
+
+    .container

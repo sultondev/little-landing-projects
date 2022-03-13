@@ -1,0 +1,492 @@
+.main
+    min-width: 100%
+    background: var(--clr-blue-2)
+    color: var(--clr-white)
+    .header
+        
+        min-height: 90px
+        padding: 30px 0
+        background: inherit
+        .nav
+            
+            &-menu
+
+                @include flex-between-center
+                @include empty-ul()
+                &__item
+                    
+                
+                &__header, &__login, &__reg, &__link
+                    color: inherit
+                    text-decoration: none
+                
+                &__header
+                    font-size: 1.6rem
+                    letter-spacing: 0.1px
+
+                &__link, &__login, &__reg
+                    font-size: var(--fs-1)
+                    font-family: "Montserrat"
+
+                
+                &__link
+                    font-weight: 600
+                    letter-spacing: 0.2px
+
+                &__login
+                    font-weight: 700
+                    letter-spacing: 0.3px
+
+                &__reg
+                    padding: 1rem 1.8rem
+                    background: var(--clr-blue-3)
+                    border-radius: 5px
+                    min-width: 260px
+                    letter-spacing: 0.8px
+                    font-weight: 700
+                    font-size: var(--fs-1)
+                    color: var(--clr-white)
+                    @include flex-between-center
+
+                &__second, &__third
+                    @include flex-between-center
+                    flex-grow: 0.2
+                &__third
+                    flex-grow: 0.1
+                
+    // NewSection welcome
+    .welcome
+        
+        position: relative
+        &-blob            
+            position: absolute;
+            top: 10rem
+            left: -4rem
+            pointer-events: none
+            width: 330px
+            height: 330px
+            &__blob
+                width: 320px
+                height: 320px
+                animation: blob-anim 6s linear infinite
+                background: var(--clr-grey-2)
+        &-banner
+            &__img
+                pointer-events: none
+        &-info
+            @include empty-ul()
+            @include flex-between-start
+            flex-direction: column
+            min-height: 500px
+            max-width: 660px
+            z-index: 1
+            &__item
+                &:nth-child(3)
+                    @include flex-between-start
+                    min-width: 64%
+            &__header
+                font-size: var(--fs-5)
+                color: inherit
+
+            &__subheader
+                font-size: 1.4rem
+                color: inherit
+
+            &__quote, &__more 
+                @include empty-btn
+                min-height: 60px
+                border-radius: 37px
+                cursor: pointer
+                color: var(--clr-white)
+            
+            &__quote
+                min-width: 200px
+                background: var(--clr-blue-3)
+            
+            &__more
+                border: 1px solid var(--clr-border-black)
+                min-width: 160px
+
+    // NewSection info
+    .info
+        
+        min-height: 721px
+        &-title
+            &__header, &__subheader
+                color: inehrit
+                font-family: "Montserrat"
+                text-align: center
+
+            &__header
+                font-size: 2.4rem
+                font-weight: 700
+            &__subheader
+                font-size: 1.2rem
+                color: var(--clr-grey-2)
+                font-weight: 400        
+                padding: 10px
+    
+        &-card
+            // @include flex-between-center
+            // flex-wrap: wrap
+            list-style: none
+            display: grid
+            grid-template-columns: repeat(auto-fit, minmax(390px, 1fr))
+            grid-template-rows: repeat(2, 1fr)
+            grid-gap: 4rem
+            padding: 70px 0 0 0
+            &__item
+                @include flex-start-start
+                padding: 46px 26px
+                border: 1px solid var(--clr-white)
+                border-radius: 2px
+                &-icon
+                    font-size: 3rem
+                    margin-right: 1rem
+                    color: var(--clr-blue-3)
+
+
+            &__title
+                &-header
+                    font-size: 1.2rem
+                    margin-bottom: 1rem
+
+                &-subheader
+                    font-size: var(--fs-1)
+                    color: var(--clr-grey-2)
+
+    // NewSection Feedback
+    .feedback
+        
+        min-height: 773px
+        height: 100vh
+        &-title, &-review
+            @include flex-between-center
+            flex-direction: column
+            max-width: 744px
+            width: 100%
+        
+        &-title
+            flex-grow: 0.2
+            &__header, &__subheader
+                color: inherit
+                text-align: center
+
+            &__header
+                font-size: 3.4rem
+
+            &__subheader
+                font-size: 1rem
+                font-family: "Montserrat"
+                line-height: 20px
+                font-weight: 500
+                letter-spacing: 0.2px
+
+
+        &-review
+            @include flex-between-center
+            position: relative
+            background: var(--clr-white)
+            min-height: 400px
+            color: var(--clr-dark)
+            list-style: none
+            border-radius: 5px
+            padding: 40px 0
+            &__prev, &__next
+                @include empty-btn()
+                @include flex-between-center
+                position: absolute
+                top: 48%
+                font-size: 2rem
+                color: var(--clr-blue-3)
+                cursor: pointer
+                border-radius: 16px
+
+            &__prev
+                left: 1rem
+            &__next
+                right: 1rem
+            
+            &__item
+                &-pc
+                    width: 120px
+                    height: 100%
+                    object-fit: cover
+                    border-radius: 50%
+                &-comment
+                    text-align: center
+                    color: var(--clr-grey-2)
+                    font-family: "Montserrat"
+                    padding: 0 9rem
+                &-star
+                    color: var(--clr-gold)
+                
+                &-name
+                    font-size: 1.6rem
+                    font-family: "Montserrat"
+                    line-height: 32px
+                    font-weight: 700
+                &-skill
+                    font-size: 14px
+                    font-weight: 600
+                    color: var(--clr-grey-1)
+
+    // NewSection app
+    .app
+        
+        
+        &-info
+            @include flex-between-center
+            flex-direction: column
+            &__header
+                font-family: "Montserrat"
+                font-weight: 700
+                font-size: 2.6rem
+                line-height: 57px
+                letter-spacing: 0.2px
+            &__subheader
+                font-family: "Montserrat"
+                font-weight: 500
+                letter-spacing: 0.2px
+                font-size: 0.9rem
+                text-align: center
+                color: var(--clr-grey-1)
+        &-store
+            @include flex-between-center
+            &__img
+                height: 82px
+                width: 240px
+
+    // NewSection pricing
+    .pricing
+        &-title
+            @include flex-between-center-column
+            flex-grow: 0.1
+            &__header
+                font-family: "Montserrat"
+                font-size: 2.2rem
+                font-weight: 700
+                letter-spacing: 0.3px
+                text-align: center
+            &__subheader
+                font-family: "Montserrat"
+                font-weight: 500
+                font-size: var(--fs-1)
+                text-align: center 
+                letter-spacing: 0.3px
+        &-tariff
+            @include flex-between-center
+            list-style: none
+            min-width: 1050px
+            &__item
+                color: var(--clr-black)
+                max-width: 510px
+                min-height: 240px
+                background: var(--clr-white)
+                border-radius: 10px
+                padding: 50px
+                @include flex-between-center
+                flex-wrap: wrap
+            &__title
+                flex-basis: 14rem
+                @include flex-between-start-column
+                min-height: 143px
+                flex-wrap: wrap
+                &-header
+                    font-size: "Montserrat"
+                    font-weight: 700
+                    font-size: 1.4rem
+                    color: var(--clr-blue)
+                &-subheader
+                    font-size: "Montserrat"
+                    font-weight: 400
+                    font-size: 1rem
+                    color: var(--clr-grey-2)
+                    line-height: 24px
+                    letter-spacing: 0.3px
+            &__info
+                color: var(--clr-blue)
+                @include flex-between-center-column
+                min-height: 134px
+                flex-wrap: wrap
+                &-price
+                    font-size: 2rem
+                &-sup, &-sub
+                    font-size: 1rem
+                &-btn
+                    padding: 15px 40px
+                    background: var(--clr-blue)
+                    color: var(--clr-white)
+                    font-size: 1rem
+                    border-radius: 5px
+                    text-decoration: none
+    
+
+    // location
+
+    .location
+        min-height: 808px
+        &-title
+            &__header
+                font-family: "Montserrat"
+                font-size: 2.4rem
+                font-weight: 700
+                letter-spacing: 0.2px
+                line-height: 57px
+            &__subheader
+                margin-top: 2rem
+                font-family: "Montserrat"
+                font-size: var(--fs-1)
+                font-weight: 500
+                letter-spacing: 0.2px
+                line-height: 20px
+        &-world
+            &__earth
+                width: 466px
+                height: 190px
+                pointer-events: none
+
+
+
+    .book
+
+        position: relative
+        min-width: 100%
+        background: var(--clr-grey-4)
+        @include flex-center-start
+        max-height: 421px
+        height: 421px
+        
+        &-banner    
+            width: 270px
+            height: 610px
+            object-fit: cover
+        
+        &-reg
+            @include flex-between-center
+            flex-direction: column
+            min-height: 610px
+            min-width: 610px
+            padding: 40px 50px
+            &__header
+                color: var(--clr-blue-2)
+            &__item
+                @include flex-between-start-column
+                
+                &-input
+                    background: var(--clr-grey-3)
+                    border-radius: 5px
+                    border: none
+                    outline: none
+                    width: 510px
+                    height: 50px
+                    font-size: 1rem
+                    color: var(--clr-grey-2)
+                    letter-spacing: 0.2px
+                    line-height: 30px
+                    font-family: "Montserrat"
+                    padding: 0 1rem
+            &__label
+                font-size: 1rem
+                font-weight: 600
+                line-height: 30px
+                letter-spacing: 0.3px
+                color: var(--clr-blue-2)
+
+            
+            
+            &__btn
+                border-radius: 5px
+                border: none
+                width: 510px
+                height: 50px
+                color: var(--clr-white)
+                background: var(--clr-blue-3)
+                letter-spacing: 0.2px
+                line-height: 30px
+                font-family: "Montserrat"
+                cursor: pointer
+
+
+
+
+
+
+
+
+
+
+.footer
+
+
+    &-list
+        min-height: 340px
+        @include flex-between-start
+        background: var(--clr-blue-2)
+        padding: 80px 190px
+        list-style: none
+        color: var(--clr-white)
+        &__item
+            @include flex-between-start-column
+            min-height: 178px
+            &-header
+                color: inherit
+                font-size: 1.6rem
+                line-height: 32px
+                letter-spacing: 0.3px
+                font-family: "Montserrat"
+                margin: 0 0 1rem 0
+            &-subheader
+                font-family: "Montserrat"
+                font-weight: 500
+                line-height: 20px
+                letter-spacing: 0.2px
+            &-links
+                text-decoration: none
+                font-size: 1rem
+                font-family: "Montserrat"
+                line-height: 24px
+                letter-spacing: 0.2px
+                font-weight: 600
+                color: inherit
+
+
+
+        &__socials
+            @include flex-between-center
+            min-width: 112px
+            &-links
+                font-size: 1.6rem
+                color: var(--clr-blue-3)
+                text-decoration: none
+            
+        
+    &-copyright
+        text-align: center
+        font-size: 1.2rem
+        line-height: 24px
+        letter-spacing: 0.2px
+        padding: 26px
+        font-weight: 600
+        font-family: "Montserrat"
+        color: var(--clr-grey-2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

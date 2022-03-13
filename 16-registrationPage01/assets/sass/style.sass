@@ -1,0 +1,69 @@
+@import animation
+@import mixin
+@import variable
+@import general
+
+
+html, body
+    height: 100vh
+
+*
+    padding: 0
+    margin: 0
+    font-family: "Poppins", sans-serif
+
+
+
+.container
+    position: relative
+    &-main
+
+
+
+
+// Animations
+.appear-left-anim
+    animation: appear-left var(--duration-element)
+
+
+.appear-right-anim
+    animation: appear-right var(--duration-element)
+
+.change-mode-anim
+    animation: change-mode 2.2s
+
+.change-banner-anim
+    animation: change-banner 2.2s
+
+
+.mode
+    &-reg
+        
+        .main
+
+            &-banner
+                &__login
+                    display: none
+                &__reg
+                    @include flex-center-center
+                    
+
+            &-reg
+                min-height: 20rem
+                &__confirm, &__email
+                    display: block
+                &__option
+                    &-login
+                        display: block
+                    &-new, &-forgot
+                        display: none
+            &-list
+                min-height: 734px
+                &__item
+                &-header
+                    display: none
+                    &-reg
+                        display: block
+.none
+    &-active
+        display: none 
